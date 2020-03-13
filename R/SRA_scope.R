@@ -24,13 +24,13 @@
 #' @param ESS If \code{comp_like = "multinomial"}, a numeric vector of length two to cap the maximum effective samples size of the age and length compositions,
 #' respectively, for the multinomial likelihood function. The effective sample size of an age or length composition sample is the minimum of ESS or the number of observations
 #' (sum across columns). For more flexibility, set ESS to be very large and alter the arrays as needed.
-#' @param max_F The maximum F for any fleet in the scoping model (higher F's in the model are penalized in the objective function). See also `drop_highF`.
+#' @param max_F The maximum F for any fleet in the scoping model (higher F's in the model are penalized in the objective function). See also \code{drop_highF}.
 #' @param cores Integer for the number of CPU cores for the stock reduction analysis.
 #' @param integrate Logical, whether to treat recruitment deviations as penalized parameters (FALSE) or random effects (TRUE).
 #' @param mean_fit Logical, whether to run an additional with mean values of life history parameters from the OM.
 #' @param sims A logical vector of length \code{OM@@nsim} or a numberic vector indicating which simulations to keep.
 #' @param drop_nonconv Logical, whether to drop non-converged fits of the SRA model.
-#' @param drop_highF Logical, whether to drop fits of the SRA model where F hits `max_F`. Only applies if `drop_nonconv` is also `TRUE.`
+#' @param drop_highF Logical, whether to drop fits of the SRA model where F hits \code{max_F}. Only applies if \code{drop_nonconv} is also \code{TRUE}.
 #' @param control A named list of arguments (e.g, max. iterations, etc.) for optimization, to be passed to \code{\link[stats]{nlminb}}.
 #' @param ... Other arguments to pass in for starting values of parameters and fixing parameters. See details.
 #' @return An object of class \linkS4class{SRA}, including the updated operating model object.
